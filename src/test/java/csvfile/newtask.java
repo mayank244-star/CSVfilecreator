@@ -18,13 +18,13 @@ public class newtask {
 	     {
 	          try
 	          {
-	                File status = new File("E:\\csv21.csv");
+	                File status = new File("C:\\Users\\user\\project\\firstcsv\\k.xls");
 	               if (status.delete())
 	               {
 	                    System.out.println("File deleted successfully");
 	               }
 	               else {
-	            		  BufferedReader bufferedReader = new BufferedReader(new FileReader("E:\\csv21.csv"));
+	            		  BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\user\\project\\firstcsv\\csv21.csv"));
 	            	      String str;
 	            	      while ((str = bufferedReader.readLine()) != null)
 	            	      {
@@ -39,7 +39,7 @@ public class newtask {
      ioe.printStackTrace();
  }
 	 
-	          CSVWriter writer = new CSVWriter(new FileWriter("E:\\csv21.csv"));
+	          CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\user\\project\\firstcsv\\k.xls"));
 	          String line1[] = {"indexno","userid","firstname","lastname","username","password", "emailid"};
 	          writer.writeNext(line1);
 	          writer.flush();
