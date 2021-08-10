@@ -3,6 +3,12 @@
   <groupId>firstcsv</groupId>
   <artifactId>firstcsv</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  <selenium.version>2.53.1</selenium.version>
+  <testng.version>6.9.10</testng.version>
+ </properties>
+ 
   <dependencies>
   
    <dependency> 
@@ -25,6 +31,12 @@
     <artifactId>javafaker</artifactId>
     <version>0.12</version>
 </dependency>
+ <dependency>
+   <groupId>org.testng</groupId>
+   <artifactId>testng</artifactId>
+   <version>${testng.version}</version>
+   <scope>test</scope>
+  </dependency>
 </dependencies>
 
 </project>

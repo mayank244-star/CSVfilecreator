@@ -10,21 +10,22 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
 
+import org.testng.annotations.Test;
+
 import com.github.javafaker.Faker;
 import com.opencsv.CSVWriter;
 
 public class newtask {
-	  public static void main(String[] args) throws IOException
-	     {
-	          try
+	@Test
+	public void m1() throws IOException {   try
 	          {
-	                File status = new File("C:\\Users\\user\\project\\firstcsv\\k.xls");
+	                File status = new File("C:\\Users\\user\\project\\firstcsv\\k.csv");
 	               if (status.delete())
 	               {
 	                    System.out.println("File deleted successfully");
 	               }
 	               else {
-	            		  BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\user\\project\\firstcsv\\csv21.csv"));
+	            		  BufferedReader bufferedReader = new BufferedReader(new FileReader("C:\\Users\\user\\project\\firstcsv\\k.csv"));
 	            	      String str;
 	            	      while ((str = bufferedReader.readLine()) != null)
 	            	      {
@@ -39,7 +40,7 @@ public class newtask {
      ioe.printStackTrace();
  }
 	 
-	          CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\user\\project\\firstcsv\\k.xls"));
+	          CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\user\\project\\firstcsv\\k.csv"));
 	          String line1[] = {"indexno","userid","firstname","lastname","username","password", "emailid"};
 	          writer.writeNext(line1);
 	          writer.flush();
